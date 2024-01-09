@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Elden Ring",
+    "publisher": "Fromsoftware",
+    "platform": "Playstation, Xbox, Pc"
+  },
+  {
+    "name": "The Witcher 3",
+    "publisher": "CD Project Red",
+    "platform": "Playstation, Xbox, Pc"
+  },
+  {
+    "name": "Skyrim",
+    "publisher": "Bethesda",
+    "platform": "Playstation, Xbox, Pc"
+  }
+]

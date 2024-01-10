@@ -1,3 +1,7 @@
+
+// Connected to login.handlebars file
+
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 

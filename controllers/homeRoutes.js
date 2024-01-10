@@ -2,33 +2,33 @@ const router = require('express').Router();
 const { Game, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-  try {
-    // Get all games and JOIN with user data
-    const gameData = await Game.findAll({ where:{
-      user_id: req.session.user_id
-    },
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/', async (req, res) => {
+//   try {
+//     // Get all games and JOIN with user data
+//     const gameData = await Game.findAll({ where:{
+//       user_id: req.session.user_id
+//     },
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    // Serialize data so the template can read it
-    const games = gameData.map((game) => game.get({ plain: true }));
+//     // Serialize data so the template can read it
+//     const games = gameData.map((game) => game.get({ plain: true }));
 
-    // Pass serialized data and session flag into template
-    res.render('gameList', { 
-      games, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//     // Pass serialized data and session flag into template
+//     res.render('gameList', { 
+//       games, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 
 
@@ -76,7 +76,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/profile');

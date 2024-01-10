@@ -1,24 +1,33 @@
+:root {
+  --space: rgb(28, 20, 80);
+  --koamaru: rgb(51, 45, 113);
+  --rhythm: rgb(125, 112, 154);
+  --cornflower: rgb(30, 82, 134);
+  --indigo: rgb(20, 54, 113);
+  --darkest: rgb(3, 29, 52);
+}
+
+
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+
+header h1 {
+  font-family: 'Tektur', sans-serif;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+h2 {
+  font-family: 'Lora', serif;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+form div label {
+  font-family: 'Lora', serif;
 }
+
+form div button {
+  font-family: 'Lora', serif !important;
+}
+
+

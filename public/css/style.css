@@ -40,10 +40,17 @@ form div button {
   color: var(--white);
 }
 
-.login-logout {
+.white-font {
   font-family: 'Lora', serif !important;
   color: var(--white);
 }
+
+.rhythm-font {
+  font-family: 'Lora', serif !important;
+  color: var(--rhythm);
+}
+
+
 
 
 

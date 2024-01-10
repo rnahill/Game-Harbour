@@ -5,17 +5,24 @@
   --cornflower: rgb(30, 82, 134);
   --indigo: rgb(20, 54, 113);
   --darkest: rgb(3, 29, 52);
+  --white: rgb(223, 224, 229);
 }
 
-
+body {
+  background-color: var(--darkest) !important;
+}
 
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+header {
+  background-color: var(--space);
+}
 
 header h1 {
   font-family: 'Tektur', sans-serif;
+  color: var(--white);
 }
 
 h2 {

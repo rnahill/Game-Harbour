@@ -17,7 +17,7 @@ header, .project:not(:last-child) {
 }
 
 header {
-  background-color: var(--space);
+  background-color: var(--cornflower);
 }
 
 header h1 {
@@ -27,14 +27,23 @@ header h1 {
 
 h2 {
   font-family: 'Lora', serif;
+  color: var(--rhythm) !important;
 }
 
-form div label {
+/* form div label {
   font-family: 'Lora', serif;
+  color: var(--white);
 }
 
 form div button {
   font-family: 'Lora', serif !important;
+  color: var(--white);
+} */
+
+.login-logout {
+  font-family: 'Lora', serif !important;
+  color: var(--white);
 }
+
 
 

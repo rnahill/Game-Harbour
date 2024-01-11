@@ -32,28 +32,28 @@ const withAuth = require('../utils/auth');
 
 
 
-router.get('/game/:id', async (req, res) => {
-  try {
-    const gameData = await Game.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// router.get('/game/:id', async (req, res) => {
+//   try {
+//     const gameData = await Game.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    const game = gameData.get({ plain: true });
+//     const game = gameData.get({ plain: true });
 
-    res.render('game', {
-      ...game,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+//     res.render('game', {
+//       ...game,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
@@ -85,5 +85,11 @@ router.get('/', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/search', withAuth, (req, res) => {
+  // render the search page
+  res.render('search');
+  return;
+})
 
 module.exports = router;

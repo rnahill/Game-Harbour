@@ -50,6 +50,11 @@ form div button {
   color: var(--rhythm);
 }
 
+.cornflower-font {
+  font-family: 'Lora', serif !important;
+  color: var(--cornflower);
+}
+
 
 
 

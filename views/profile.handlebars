@@ -1,7 +1,7 @@
 {{!-- My Games Page --}}
 
 
-<div class="row justify-content-between">
+<section class="row justify-content-between">
 
   <div class="col-3">
     <h4 class="white-font">Welcome, {{name}}!</h4>
@@ -12,7 +12,13 @@
     <button class="btn btn-primary white-font" id="profile-search-btn">Search for a game</button>
   </div>
 
-</div>
+</section>
+
+<section class="flex-row justify-center">
+    {{#each user.games as |game|}}
+    {{> my-game-box}}
+    {{/each}}
+</section>
 
 <script src="./js/profile.js"></script>
 

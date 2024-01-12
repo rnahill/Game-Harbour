@@ -1,24 +1,56 @@
+:root {
+  --space: rgb(28, 20, 80);
+  --koamaru: rgb(51, 45, 113);
+  --rhythm: rgb(125, 112, 154);
+  --cornflower: rgb(30, 82, 134);
+  --indigo: rgb(20, 54, 113);
+  --darkest: rgb(3, 29, 52);
+  --white: rgb(223, 224, 229);
+}
+
+body {
+  background-color: var(--darkest) !important;
+}
+
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--white);
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+header {
+  background-color: var(--cornflower);
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+header h1 {
+  font-family: 'Tektur', sans-serif;
+  color: var(--white);
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+h2 {
+  font-family: 'Lora', serif;
+  color: var(--rhythm) !important;
 }
+
+form div label {
+  font-family: 'Lora', serif;
+  color: var(--white);
+}
+
+form div button {
+  font-family: 'Lora', serif !important;
+  color: var(--white);
+}
+
+.white-font {
+  font-family: 'Lora', serif !important;
+  color: var(--white);
+}
+
+.rhythm-font {
+  font-family: 'Lora', serif !important;
+  color: var(--rhythm);
+}
+
+
+
+
+

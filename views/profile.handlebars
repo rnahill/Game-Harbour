@@ -1,37 +1,18 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{ Username }}!</h2>
+{{!-- My Games Page --}}
+
+
+<div class="row justify-content-between">
+
+  <div class="col-3">
+    <h4 class="white-font">Welcome, {{name}}!</h4>
+    <h1 class="rhythm-font mt-4">My Games</h1>
   </div>
+
+  <div class="col-2">
+    <button class="btn btn-primary white-font" id="profile-search-btn">Search for a game</button>
+  </div>
+
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>My Games:</h3>
 
-      <div class="form-group">
-       <button type="submit" class="btn btn-primary">Search</button>
-      </div>
-    </form>
-  </div>
-
-
-<script src="./js/profile.js"></script>
-
-  {{!-- {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{!-- {{#each projects as |project|}} --}}
-    {{!-- <div class="row mb-2"> --}}
-      {{!-- <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div> --}}
-      {{!-- <div class="col-md-4"> --}}
-        {{!-- <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div> --}}
 

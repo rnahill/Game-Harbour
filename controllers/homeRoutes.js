@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { Game, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
+require('dotenv').config();
+const axios = require('axios')
 
 // router.get('/', async (req, res) => {
 //   try {
@@ -86,9 +88,22 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
-router.get('/search', withAuth, (req, res) => {
+router.get('/search', (req, res) => {
+  res.render('search')
+})
+
+router.get('/search/:title', withAuth, async (req, res) => {
   // render the search page
-  res.render('search');
+  const apikey = process.env.GIANT_BOMB_APIKEY
+  const baseurl = `https://www.giantbomb.com/api/search/?api_key=${apikey}&format=json&query=${req.params.title}&resources=game`
+  let data = await axios.get(baseurl)
+  data = JSON.parse(JSON.stringify(data.data))
+  console.log(data)
+  res.render('search', {
+    apikey: process.env.GIANT_BOMB_APIKEY, 
+    data: data.results
+  });
+
   return;
 })
 

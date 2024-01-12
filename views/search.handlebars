@@ -1,7 +1,14 @@
-<form>
+<form id = "form">
   <div class="mb-3">
     <label for="searchForAGame" class="form-label m-2">Search for a game:</label>
     <input type="search" class="form-control" id="search-form" placeholder="&#x1F50E;">
   </div>
   <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
 </form>
+
+{{link}}
+
+<script>
+  const apikey = "{{apikey}}";
+</script>
+<script src="/js/search.js"></script>

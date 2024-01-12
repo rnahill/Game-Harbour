@@ -49,5 +49,5 @@ document
 document
   .querySelector('#profile-search-btn')
   .addEventListener('click', () => {
-    window.location.href = '/search';
+    document.location.replace('/search');
 });

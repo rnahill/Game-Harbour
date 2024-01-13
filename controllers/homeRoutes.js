@@ -70,8 +70,8 @@ router.get('/search', (req, res) => {
 
 router.get('/search/:title', withAuth, async (req, res) => {
   // render the search page
-  const apikey = process.env.GIANT_BOMB_APIKEY
-  const baseurl = `https://www.giantbomb.com/api/search/?api_key=${apikey}&format=json&query=${req.params.title}&resources=game`
+  // const apikey = process.env.GIANT_BOMB_APIKEY
+  const baseurl = `https://www.giantbomb.com/api/search/?api_key=${process.env.GIANT_BOMB_APIKEY}&format=json&query=${req.params.title}&resources=game`
   let data = await axios.get(baseurl)
   data = JSON.parse(JSON.stringify(data.data))
   console.log(data)

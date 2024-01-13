@@ -2,16 +2,19 @@
   {
     "name": "Elden Ring",
     "publisher": "Fromsoftware",
-    "platform": "Playstation, Xbox, Pc"
+    "platform": "Playstation, Xbox, Pc",
+    "user_id": "1"
   },
   {
     "name": "The Witcher 3",
     "publisher": "CD Project Red",
-    "platform": "Playstation, Xbox, Pc"
+    "platform": "Playstation, Xbox, Pc",
+    "user_id": "2"
   },
   {
     "name": "Skyrim",
     "publisher": "Bethesda",
-    "platform": "Playstation, Xbox, Pc"
+    "platform": "Playstation, Xbox, Pc",
+    "user_id": "3"
   }
 ]

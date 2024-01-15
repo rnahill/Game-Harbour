@@ -1,6 +1,7 @@
-{{!-- Test --}}
 
-<div id="gameBox" class="container my-4 p-3 border rounded row">
+{{!-- Game Box that will render on the My Games/Profile page once a user has added a game --}}
+
+<div id="profileGameBox" class="container my-4 p-3 border rounded row">
   <h2 class="col-3">Game Name</h2>
   <div class="col-6 row">
       <h3 class="col cornflower-font m-1">Publisher</h3>
@@ -16,10 +17,10 @@
 
     <div class="d-flex align-items-end flex-column mb-3" style="height: 200px;">
         <div class="p-2">
-          <button class="btn btn-primary btn-sm white-font">Write a review</button>
+          <button class="btn btn-primary btn-sm white-font" id="writeReviewBtn">Write a review</button>
         </div>
         <div class="mt-auto p-2">
-          <button class="btn btn-primary btn-sm white-font">View reviews</button>
+          <button class="btn btn-primary btn-sm white-font" id="viewReviewBtn">View reviews</button>
         </div>
     </div>
 

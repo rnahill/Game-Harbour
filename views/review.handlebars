@@ -3,7 +3,11 @@
   <h2 class="rhythm-font ms-3 mt-2">Reviews</h2>
 </section>
 
-{{!-- Test --}}
+<section class="flex-row justify-center">
+    {{#each user.games as |game|}}
+    {{> review-box}}
+    {{/each}}
+</section>
 
 
 

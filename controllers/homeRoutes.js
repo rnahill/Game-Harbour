@@ -3,7 +3,13 @@ const { Game, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 require('dotenv').config();
 const axios = require('axios')
+const express = require('express');
+const exphbs = require('express-handlebars');
 
+const app = express();
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 // router.get('/game/:id', async (req, res) => {
 //   try {
@@ -11,7 +17,6 @@ const axios = require('axios')
 //       include: [
 //         {
 //           model: User,
-//           attributes: ['name'],
 //         },
 //       ],
 //     });
@@ -30,6 +35,7 @@ const axios = require('axios')
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
+
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {

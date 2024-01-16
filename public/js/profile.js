@@ -53,3 +53,5 @@ document
   .addEventListener('click', () => {
     document.location.replace('/search');
 });
+
+

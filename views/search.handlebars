@@ -1,4 +1,7 @@
-<form id = "form" action="/Homework/Game-Harbour/controllers/homeRoutes.js" method="GET">
+{{!-- Search games page --}}
+
+
+<form id = "form">
   <div class="mb-3">
     <label for="searchForAGame" class="form-label m-2">Search for a game:</label>
     <input type="search" class="form-control" id="search-form" placeholder="&#x1F50E;">
@@ -6,20 +9,11 @@
   <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
 </form>
 
-{{#if data}}
-  <h1>Search Results</h1>
-  <div id="search-results">
-    {{#each data}}
-      <div class="result">
-        <h2>{{name}}</h2>
-        <p>Description: {{description}}</p>
-        
-      </div>
+<section class="flex-row justify-center">
+    {{#each games as |game|}}
+    {{> search-game-box}}
     {{/each}}
-  </div>
-{{else}}
-  <p>No results found.</p>
-{{/if}}
+</section>
 
 <script>
   const apikey = "{{apikey}}";

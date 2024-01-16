@@ -6,7 +6,11 @@
   <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
 </form>
 
-{{link}}
+<section class="flex-row justify-center">
+    {{#each user.games as |game|}}
+    {{> search-game-box}}
+    {{/each}}
+</section>
 
 <script>
   const apikey = "{{apikey}}";

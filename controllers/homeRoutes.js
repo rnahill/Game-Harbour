@@ -84,7 +84,7 @@ router.get('/search/:title', withAuth, async (req, res) => {
 });
 
 router.get('/review', (req, res) => {
-  res.render('reviews')
+  res.render('review')
 });
 
 module.exports = router;

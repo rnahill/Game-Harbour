@@ -17,9 +17,9 @@ const addGameHandle = async (event) => {
     const name = document.querySelector("#gameName").textContent;
     const ogRelease = document.querySelector("#gamePublisher").textContent;
     const platform = document.querySelector("#gamePlatform").textContent;
-    console.log(name, publisher, platform)
+    console.log(name, ogRelease, platform)
 
-    if (name && publisher && platform) {
+    if (name && ogRelease && platform) {
         const response = await fetch('/api/games/addGame', {
             method: 'POST',
             body: JSON.stringify({name, ogRelease, platform}),

@@ -3,7 +3,14 @@ const { Game, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 require('dotenv').config();
 const axios = require('axios')
+const express = require('express');
+const exphbs = require('express-handlebars');
+const { json } = require('sequelize');
 
+const app = express();
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 // router.get('/game/:id', async (req, res) => {
 //   try {
@@ -11,7 +18,6 @@ const axios = require('axios')
 //       include: [
 //         {
 //           model: User,
-//           attributes: ['name'],
 //         },
 //       ],
 //     });
@@ -30,6 +36,7 @@ const axios = require('axios')
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
+
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -69,15 +76,17 @@ router.get('/search', (req, res) => {
 });
 
 router.get('/search/:title', withAuth, async (req, res) => {
+  console.log(req.params.title);
   // render the search page
   // const apikey = process.env.GIANT_BOMB_APIKEY
   const baseurl = `https://www.giantbomb.com/api/search/?api_key=${process.env.GIANT_BOMB_APIKEY}&format=json&query=${req.params.title}&resources=game`
   let data = await axios.get(baseurl)
   data = JSON.parse(JSON.stringify(data.data))
-  console.log(data)
+  console.log(JSON.stringify(data.results,null, 2))
+  
   res.render('search', {
     apikey: process.env.GIANT_BOMB_APIKEY, 
-    data: data.results
+    games: data.results
   });
 
   return;

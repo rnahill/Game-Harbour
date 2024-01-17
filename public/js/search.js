@@ -14,14 +14,15 @@ const doApiCall = async (event) => {
 
 const addGameHandle = async (event) => {
     event.preventDefault();
-    const name = document.querySelector("#gameName").value;
-    const publisher = document.querySelector("#gamePublisher").value;
-    const platform = document.querySelector("#gamePlatform").value;
+    const name = document.querySelector("#gameName").textContent;
+    const ogRelease = document.querySelector("#gamePublisher").textContent;
+    const platform = document.querySelector("#gamePlatform").textContent;
+    console.log(name, publisher, platform)
 
     if (name && publisher && platform) {
         const response = await fetch('/api/games/addGame', {
             method: 'POST',
-            body: JSON.stringify({name, publisher, platform}),
+            body: JSON.stringify({name, ogRelease, platform}),
             headers: { 'Content-Type': 'application/json' },
         });
         if(response.ok){

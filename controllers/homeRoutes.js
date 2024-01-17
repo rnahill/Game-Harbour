@@ -77,7 +77,7 @@ router.get('/search/:title', withAuth, async (req, res) => {
   console.log(data)
   res.render('search', {
     apikey: process.env.GIANT_BOMB_APIKEY, 
-    data: data.results
+    games: data.results
   });
 
   return;

@@ -5,17 +5,24 @@
 
 <div id="searchGameBox" class="container my-4 p-3 border rounded row">
 
-  <h2 class="col-3" id="gameName">{{name}}</h2>
+  <h2 class="col-3" id="gameName">{{aliases}}</h2>
+
+  <img src="{{ image.medium_url }}">
 
   <div class="col-6 row">
     
-      <h3 class="col cornflower-font m-1">Publisher</h3>
+      <h3 class="col cornflower-font m-1">Description</h3>
         <div class="border rounded m-2 p-1">
+
           <p class="white-font" id="gamePublisher">{{original_release_date}}</p>
         </div>
       <h3 class="col cornflower-font m-1">Platforms</h3>
         <div class="border rounded m-2 p-1">
-          <p class="white-font"id="gamePlatform">{{platforms}}</p>
+
+          {{#each platforms as | platform |}}
+          <p class="white-font"id="gamePlatform">{{name}}</p>
+          {{/each}}
+          
         </div>
 
   </div>

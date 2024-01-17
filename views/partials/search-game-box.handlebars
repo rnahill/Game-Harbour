@@ -5,12 +5,9 @@
 
 <div id="searchGameBox" class="container my-4 p-3 border rounded row">
 
-
-  <h2 class="col-3" id="gameName">{{ name }}</h2>
-
-
 <div class="col-3">
-  <img src="{{ image.medium_url }}" class="img-fluid" style=" max-width: 100%; max-height: 100% " >
+  <h2 id="gameName">{{ name }}</h2>
+  <img src="{{ image.medium_url }}" class="img-fluid" style=" max-width: 80%; max-height: auto " >
 </div>
 
   <div class="col-6 row">
@@ -33,10 +30,15 @@
 
   <div class="col-3">
 
-    <div class="d-flex align-items-end flex-column mb-3" style="height: 200px;">
+    <div class="d-flex align-items-end flex-column mb-3" style="min-height: 100%;">
 
         <div class="p-2">
-          <button class="btn btn-primary btn-sm white-font addGameBtn">Add game</button>
+
+
+          <button class="btn btn-primary btn-sm white-font addGameBtn" data-toggle="modal" data-target="#gameAddedModal"> 
+            Add game
+            </button>
+
         </div>
         <div class="mt-auto p-2">
           <button class="btn btn-primary btn-sm white-font" id="viewReviewBtn">View reviews</button>
@@ -44,5 +46,25 @@
 
     </div>
 
+  </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="gameAddedModal" tabindex="-1" role="dialog" aria-labelledby="gameAddedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gameAddedModalLabel">Game Added!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Your game has been successfully added.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

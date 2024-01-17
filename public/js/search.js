@@ -1,6 +1,7 @@
 const searchForm = document.querySelector("#form")
 const searchInput = document.querySelector("#search-form")
 const addGame = document.querySelector('#addGameBtn')
+const returnProfile = document.querySelector('#returnProfile')
 
 const doApiCall = async (event) => {
     event.preventDefault();
@@ -10,16 +11,21 @@ const doApiCall = async (event) => {
         window.location = '/search/' + title;
     }
    
-}
+};
+
+const doReturn = async (event) => {
+    event.preventDefault();
+    document.location.replace('/profile');
+};
 
 const addGameHandle = async (event) => {
     event.preventDefault();
     const name = document.querySelector("#gameName").textContent;
     const ogRelease = document.querySelector("#gamePublisher").textContent;
     const platform = document.querySelector("#gamePlatform").textContent;
-    console.log(name, publisher, platform)
+    console.log(name, ogRelease, platform)
 
-    if (name && publisher && platform) {
+    if (name && ogRelease && platform) {
         const response = await fetch('/api/games/addGame', {
             method: 'POST',
             body: JSON.stringify({name, ogRelease, platform}),
@@ -33,8 +39,10 @@ const addGameHandle = async (event) => {
     }
 
 
-}
+};
 
 searchForm.addEventListener('submit', doApiCall);
+
+returnProfile.addEventListener('click', doReturn)
 
 addGame.addEventListener('click', addGameHandle)

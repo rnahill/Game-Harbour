@@ -1,6 +1,6 @@
 const searchForm = document.querySelector("#form")
 const searchInput = document.querySelector("#search-form")
-const addGame = document.querySelector('#addGameBtn')
+const addGame = document.querySelectorAll('.addGameBtn')
 const returnProfile = document.querySelector('#returnProfile')
 
 const doApiCall = async (event) => {
@@ -45,4 +45,8 @@ searchForm.addEventListener('submit', doApiCall);
 
 returnProfile.addEventListener('click', doReturn)
 
-addGame.addEventListener('click', addGameHandle)
+if(addGame) {
+    for (var i = 0; i<addGame.length; i++){
+        addGame[i].addEventListener('click', addGameHandle);
+    }
+};

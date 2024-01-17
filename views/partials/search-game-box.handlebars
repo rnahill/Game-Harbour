@@ -33,7 +33,9 @@
     <div class="d-flex align-items-end flex-column mb-3" style="min-height: 100%;">
 
         <div class="p-2">
-          <button class="btn btn-primary btn-sm white-font" id="addGameBtn">Add game</button>
+          <button class="btn btn-primary btn-sm white-font" id="addGameBtn" data-toggle="modal" data-target="#gameAddedModal"> 
+            Add game
+            </button>
         </div>
         <div class="mt-auto p-2">
           <button class="btn btn-primary btn-sm white-font" id="viewReviewBtn">View reviews</button>
@@ -41,5 +43,25 @@
 
     </div>
 
+  </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="gameAddedModal" tabindex="-1" role="dialog" aria-labelledby="gameAddedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gameAddedModalLabel">Game Added!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Your game has been successfully added.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

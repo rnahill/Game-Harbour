@@ -1,19 +1,19 @@
 [
   {
     "name": "Elden Ring",
-    "publisher": "Fromsoftware",
+    "ogRelease": "Fromsoftware",
     "platform": "Playstation, Xbox, Pc",
     "user_id": "1"
   },
   {
     "name": "The Witcher 3",
-    "publisher": "CD Project Red",
+    "ogRelease": "CD Project Red",
     "platform": "Playstation, Xbox, Pc",
     "user_id": "2"
   },
   {
     "name": "Skyrim",
-    "publisher": "Bethesda",
+    "ogRelease": "Bethesda",
     "platform": "Playstation, Xbox, Pc",
     "user_id": "3"
   }

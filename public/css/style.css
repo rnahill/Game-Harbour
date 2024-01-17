@@ -54,3 +54,7 @@ form div button {
   font-family: 'Lora', serif !important;
   color: var(--cornflower);
 }
+
+#profileGameBox, #searchGameBox {
+  box-shadow: 5px 5px 50px 4px black;
+}

@@ -15,7 +15,7 @@ Game.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    publisher: {
+    ogRelease: {
       type: DataTypes.STRING,
       allowNull: false,
     },

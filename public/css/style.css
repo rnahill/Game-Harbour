@@ -55,6 +55,11 @@ form div button {
   color: var(--cornflower);
 }
 
+img {
+  max-height: 20%;
+  max-width: 5%;
+}
+
 
 
 

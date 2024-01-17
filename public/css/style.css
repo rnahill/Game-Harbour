@@ -55,6 +55,6 @@ form div button {
   color: var(--cornflower);
 }
 
-#profileGameBox, #searchGameBox {
+#profileGameBox, #searchGameBox, .box-shadow {
   box-shadow: 5px 5px 50px 4px black;
 }

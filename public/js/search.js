@@ -20,9 +20,11 @@ const doReturn = async (event) => {
 
 const addGameHandle = async (event) => {
     event.preventDefault();
-    const name = document.querySelector("#gameName").textContent;
-    const ogRelease = document.querySelector("#gamePublisher").textContent;
-    const platform = document.querySelector("#gamePlatform").textContent;
+    const gameContainer = event.currentTarget.closest('.container');
+
+    const name = gameContainer.querySelector("#gameName").textContent;
+    const ogRelease = gameContainer.querySelector("#gamePublisher").textContent;
+    const platform = gameContainer.querySelector("#gamePlatform").textContent;
     console.log(name, ogRelease, platform)
 
     if (name && ogRelease && platform) {

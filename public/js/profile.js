@@ -12,3 +12,17 @@ document
 });
 
 viewReview.addEventListener('click', viewReviewHandler)
+
+// Saving a review
+const saveReviewBtn = document.querySelector("#saveReviewBtn");
+
+
+const saveReview = async (event) => {
+  event.preventDefault();
+  const reviewText = document.querySelector("#floatingTextarea").value;
+
+  console.log(reviewText);
+
+};
+
+saveReviewBtn.addEventListener('click', saveReview); 

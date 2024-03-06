@@ -25,14 +25,10 @@ Game-Harbour is an interactive web application designed for gamers in order to s
 - **3rd Party APIs**: [Giant Bomb](https://www.giantbomb.com/)
 
 ## Installation 
-- **Install npm packages**
-- **Set up env file with required variables**
-- **Initialize db/ Import schema**
-- **Run seed file**
-- **Start server**
+- **No installation required, simply follow the link below to access the application:**
+- https://game-harbour-123-8c07ddc3abc7.herokuapp.com/
 
 ## Usage
-After starting the server, navigate to http://localhost:3001 in your web browser to start using Games-Harbour.
 - **Log in or Sign up with your credentials**
 - **Search for games**
 - **Choose to add game to your profile** or **View reviews for game**
